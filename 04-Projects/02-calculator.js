@@ -12,37 +12,31 @@ class Calculator {
     add(a, b = null) {
         if (b === null) {
             this.result += a;
-            this.addToHistory('add', a, b);
-            return this;
         } else {
             this.result = a + b;
-            this.addToHistory('add', a, b);
-            return this.result;
         }
+        this.addToHistory('add', a, b);
+        return this;
     }
 
     subtract(a, b = null) {
         if (b === null) {
             this.result -= a;
-            this.addToHistory('subtract', a, b);
-            return this;
         } else {
             this.result = a - b;
-            this.addToHistory('subtract', a, b);
-            return this.result;
         }
+        this.addToHistory('subtract', a, b);
+        return this;
     }
 
     multiply(a, b = null) {
         if (b === null) {
             this.result *= a;
-            this.addToHistory('multiply', a, b);
-            return this;
         } else {
             this.result = a * b;
-            this.addToHistory('multiply', a, b);
-            return this.result;
         }
+        this.addToHistory('multiply', a, b);
+        return this;
     }
 
     divide(a, b = null) {
@@ -52,20 +46,18 @@ class Calculator {
         }
         if (b === null) {
             this.result /= a;
-            this.addToHistory('divide', a, b);
-            return this;
         } else {
             this.result = a / b;
-            this.addToHistory('divide', a, b);
-            return this.result;
         }
+        this.addToHistory('divide', a, b);
+        return this;
     }
 
     // Advanced operations
     power(base, exponent) {
         this.result = Math.pow(base, exponent);
         this.addToHistory('power', base, exponent);
-        return this.result;
+        return this;
     }
 
     sqrt(num) {
@@ -74,19 +66,19 @@ class Calculator {
         }
         this.result = Math.sqrt(num);
         this.addToHistory('sqrt', num);
-        return this.result;
+        return this;
     }
 
     percentage(num, percent) {
         this.result = (num * percent) / 100;
         this.addToHistory('percentage', num, percent);
-        return this.result;
+        return this;
     }
 
     // Utility methods
     clear() {
         this.result = 0;
-        return this.result;
+        return this;
     }
 
     getResult() {
@@ -123,15 +115,15 @@ console.log("=== Calculator Demo ===\n");
 const calc = new Calculator();
 
 // Basic operations
-console.log("10 + 5 =", calc.add(10, 5));
-console.log("20 - 8 =", calc.subtract(20, 8));
-console.log("6 * 7 =", calc.multiply(6, 7));
-console.log("100 / 4 =", calc.divide(100, 4));
+console.log("10 + 5 =", calc.add(10, 5).getResult());
+console.log("20 - 8 =", calc.subtract(20, 8).getResult());
+console.log("6 * 7 =", calc.multiply(6, 7).getResult());
+console.log("100 / 4 =", calc.divide(100, 4).getResult());
 
 // Advanced operations
-console.log("\n2^8 =", calc.power(2, 8));
-console.log("√144 =", calc.sqrt(144));
-console.log("20% of 150 =", calc.percentage(150, 20));
+console.log("\n2^8 =", calc.power(2, 8).getResult());
+console.log("√144 =", calc.sqrt(144).getResult());
+console.log("20% of 150 =", calc.percentage(150, 20).getResult());
 
 // Chain operations
 console.log("\nChained operations:");
