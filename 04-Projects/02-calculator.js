@@ -12,31 +12,37 @@ class Calculator {
     add(a, b = null) {
         if (b === null) {
             this.result += a;
+            this.addToHistory('add', a, b);
+            return this;
         } else {
             this.result = a + b;
+            this.addToHistory('add', a, b);
+            return this.result;
         }
-        this.addToHistory('add', a, b);
-        return this.result;
     }
 
     subtract(a, b = null) {
         if (b === null) {
             this.result -= a;
+            this.addToHistory('subtract', a, b);
+            return this;
         } else {
             this.result = a - b;
+            this.addToHistory('subtract', a, b);
+            return this.result;
         }
-        this.addToHistory('subtract', a, b);
-        return this.result;
     }
 
     multiply(a, b = null) {
         if (b === null) {
             this.result *= a;
+            this.addToHistory('multiply', a, b);
+            return this;
         } else {
             this.result = a * b;
+            this.addToHistory('multiply', a, b);
+            return this.result;
         }
-        this.addToHistory('multiply', a, b);
-        return this.result;
     }
 
     divide(a, b = null) {
@@ -46,11 +52,13 @@ class Calculator {
         }
         if (b === null) {
             this.result /= a;
+            this.addToHistory('divide', a, b);
+            return this;
         } else {
             this.result = a / b;
+            this.addToHistory('divide', a, b);
+            return this.result;
         }
-        this.addToHistory('divide', a, b);
-        return this.result;
     }
 
     // Advanced operations
