@@ -6,16 +6,15 @@ This repository is structured to guide you through JavaScript fundamentals step 
 
 ## Prerequisites
 
-- Node.js installed on your computer (version 12 or higher)
+- Node.js installed on your computer (version 18 or higher recommended)
 - A code editor (VS Code, Sublime Text, or any text editor)
 - Basic understanding of programming concepts (helpful but not required)
 
 ## Quick Start
 
 ```bash
-# Clone this repository
-git clone https://github.com/ARahmanAR/JS.git
-cd JS
+# Clone this repository or download it
+# cd into the directory
 
 # Run the main overview
 npm start
