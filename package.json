@@ -1,0 +1,25 @@
+{
+  "name": "js-journey",
+  "version": "1.0.0",
+  "description": "JavaScript Journey - Learn JavaScript from basics to advanced",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "basics": "node basics/01-hello-world.js && node basics/02-data-types.js",
+    "variables": "node variables/01-declarations.js",
+    "functions": "node functions/01-basics.js",
+    "arrays": "node arrays/01-basics.js",
+    "objects": "node objects/01-basics.js",
+    "control-flow": "node control-flow/01-conditionals.js",
+    "loops": "node loops/01-basics.js"
+  },
+  "keywords": [
+    "javascript",
+    "learning",
+    "tutorial",
+    "examples",
+    "education"
+  ],
+  "author": "ARahmanAR",
+  "license": "MIT"
+}
